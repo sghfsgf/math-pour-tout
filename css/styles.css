@@ -10,76 +10,6 @@ body {
 /* ===== MENU PRINCIPAL ===== */
 .nav-container {
   display: flex;
-  align-items: center;
-  background: #f9a825; /* orangé clair */
-  padding: 10px 20px;
-}
-
-.nav-container .logo img {
-  height: 50px;
-}
-
-/* Liens */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  color: #fff;
-  background: #d48806;
-  border-radius: 4px;
-}
-
-/* Burger */
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  margin-left: auto;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background:#0339F8; /* bleu vif */
-  color: #fff;
-  text-align: center;
-  padding: 12px 0;
-  font-size: 0.95rem;
-  margin-top: 30px;
-}
-
-footer p {
-  margin: 4px 0;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .hamburger {
-    display: block;
-  }
-}
-
-/* --- Styles de base du menu --- */
-.nav-container {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #007ACC; /* Bleu menu */
@@ -94,12 +24,22 @@ footer p {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  padding: 6px 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #005F9E; /* Bleu plus foncé au survol */
+  border-radius: 4px;
+  color: #fff;
 }
 
 /* Hamburger caché sur grand écran */
@@ -110,7 +50,21 @@ footer p {
   cursor: pointer;
 }
 
-/* --- Responsive pour écrans ≤ 768px --- */
+/* ===== FOOTER ===== */
+footer {
+  background: #0339F8; /* bleu vif */
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0.95rem;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+/* ===== RESPONSIVE pour écran ≤ 768px ===== */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -121,17 +75,10 @@ footer p {
     flex-direction: column;
     align-items: center;
     display: none; /* caché par défaut */
-  }
+    z-index: 1000; /*
 
-  .nav-links li {
-    margin: 15px 0;
-  }
+  
 
-  .hamburger {
-    display: block;
-  }
+  
+  
 
-  .nav-links.active {
-    display: flex;
-  }
-}
