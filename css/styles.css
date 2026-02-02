@@ -1,0 +1,78 @@
+/* ===== GLOBAL ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #222;
+}
+
+/* ===== MENU PRINCIPAL ===== */
+.nav-container {
+  display: flex;
+  align-items: center;
+  background: #f9a825; /* orangé clair */
+  padding: 10px 20px;
+}
+
+.nav-container .logo img {
+  height: 50px;
+}
+
+/* Liens */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  background: #d48806;
+  border-radius: 4px;
+}
+
+/* Burger */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0d47a1; /* bleu vif */
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0.95rem;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
