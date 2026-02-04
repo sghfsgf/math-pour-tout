@@ -109,3 +109,28 @@ footer p {
     margin: 12px 0;
   }
 }
+/* Couleur bleu identique à celle du logo */
+.title-blue {
+  color: #1E90FF; /* Bleu ciel (modifiable selon ton logo) */
+  font-size: 2rem; /* Un peu plus grand que le texte normal */
+  margin-bottom: 0.5em;
+}
+
+/* Texte des sections un peu plus petit */
+.aides-section p,
+.aides-section li,
+.aides-section ol {
+  font-size: 0.9rem; /* petite réduction de la taille du texte */
+  line-height: 1.5;
+}
+
+/* Espacement entre les sections */
+.aides-section {
+  margin-top: 1.25em;
+}
+
+/* Titre des sous‑sections plus lisible */
+.aides-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5em;
+}
