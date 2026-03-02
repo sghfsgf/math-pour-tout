@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SGH Maths Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="SGH Maths Academy" class="logo-img">
+            <span>SGH Maths Academy</span>
+        </div>
+        <div class="menu-toggle">&#9776;</div>
+        <nav id="mainNav">
+            <a href="index.html">Accueil</a>
+            <a href="college.html">Collège</a>
+            <a href="lycee.html">Lycée</a>
+            <a href="primaire.html">Primaire</a>
+            <a href="conseils.html">Conseils</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <div class="content">
+        <h1>Contactez-nous</h1>
+        <p>Pour toute question ou suggestion, utilisez le formulaire ci-dessous :</p>
+
+        <!-- Formulaire via Formsubmit.co -->
+        <form action="https://formsubmit.co/esghaier.ainformation@gmail.com" method="POST" enctype="multipart/form-data">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <label for="attachment">Joindre un fichier (PDF, image, Word) :</label>
+            <input type="file" id="attachment" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+
+            <!-- Formsubmit instructions -->
+            <input type="hidden" name="_captcha" value="false"> <!-- Désactive captcha si voulu -->
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</main>
+
+<footer class="site-footer">
+    Copyright 2026 SGH pour Maths Academy
+</footer>
+
+<script>
+    // Menu hamburger mobile
+    const toggleMenu = () => {
+        const nav = document.getElementById("mainNav");
+        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    }
+    document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
+</script>
+</body>
+</html>
