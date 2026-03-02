@@ -1,39 +1,71 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Maths‑pour‑Tout – Accueil</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maths Academy</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1f4e79">
+
 </head>
 <body>
 
 <header>
-  <nav class="nav-container">
-    <a href="index.html" class="logo"><img src="ressources/images/logo.png" alt="Logo Maths‑pour‑Tout"></a>
-    <div id="hamburger" class="hamburger">☰</div>
-    <ul id="nav-links" class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="primaire/index.html">Primaire</a></li>
-      <li><a href="college/index.html">Collège</a></li>
-      <li><a href="lycee/index.html">Lycée</a></li>
-      <li><a href="aides.html">Aides</a></li>
-      <li><a href="../au_revoir.html">Quitter</a></li>
+<div class="nav-container">
 
-    </ul>
-  </nav>
+<div class="logo">Maths Academy</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="mainNav">
+<a href="index.html">Accueil</a>
+<a href="college.html">Collège</a>
+<a href="lycee.html">Lycée</a>
+<a href="primaire.html">Primaire</a>
+<a href="conseils.html">Conseils</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</div>
 </header>
 
-<main>
-  <h1>Bienvenue sur Maths‑pour‑Tout</h1>
-  <p>Explore les ressources par niveau : Primaire, puis Collège et Lycée bientôt !</p>
-</main>
+<!-- CONTENU PRINCIPAL -->
+<div class="container">
 
-<footer>
-  <p>2026 © maths‑pour‑Tout</p>
-  <p>✉️ Contact : esghaier.ainformation@gmail.com</p>
-</footer>
+<div class="content">
+<h1>Bienvenue sur Maths Academy</h1>
 
-<script src="js/menu.js"></script>
+<p>
+Cours, exercices et séries corrigées pour le Primaire, le Collège et le Lycée.
+</p>
+
+<p>
+Choisissez un niveau dans le menu pour commencer.
+</p>
+
+</div>
+
+</div>
+
+<!-- SCRIPT MENU MOBILE -->
+<script>
+function toggleMenu(){
+    const nav = document.getElementById("mainNav");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+</script>
+
+<!-- SERVICE WORKER -->
+<script>
+if("serviceWorker" in navigator){
+    navigator.serviceWorker.register("service-worker.js");
+}
+</script>
 
 </body>
 </html>
