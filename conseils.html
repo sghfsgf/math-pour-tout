@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conseils - SGH Maths Academy</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Styles des accordéons */
+.accordion {
+    background-color: #ff8000; /* orange vif */
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.accordion:hover { background-color: #e67300; }
+
+.accordion-icon {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.accordion.active .accordion-icon { transform: rotate(90deg); }
+
+.panel {
+    padding: 0 20px 15px 20px;
+    display: none;
+    background-color: #f9f9f9;
+    border-left: 4px solid #ff8000;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 10px;
+}
+
+.panel ul { list-style: none; padding-left: 0; }
+
+.panel li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icônes colorées */
+.panel li::before {
+    content: "✔"; /* symbole check */
+    display: inline-block;
+    color: #1f4e79; /* bleu ciel */
+    font-weight: bold;
+}
+
+/* Citation inspirante */
+.panel p { margin-top: 10px; font-style: italic; }
+
+/* Responsive accordéon */
+@media(max-width:768px){
+    .accordion { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="nav-container">
+    <div class="logo">
+
+        <span>Maths Academy</span>
+    </div>
+    <div class="menu-toggle">&#9776;</div>
+    <nav id="mainNav">
+        <a href="index.html">Accueil</a>
+        <a href="college.html">Collège</a>
+        <a href="lycee.html">Lycée</a>
+        <a href="primaire.html">Primaire</a>
+        <a href="conseils.html">Conseils</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</div>
+</header>
+
+<main class="container">
+<div class="content">
+    <h1>Motivation et astuces pour les maths</h1>
+
+    <!-- Accordéon 1 -->
+    <button class="accordion"><span class="accordion-icon">&#9654;</span>Comment ne pas se décourager si on bloque sur un problème</button>
+    <div class="panel">
+        <ul>
+            <li>Faire une pause courte et revenir avec un esprit frais.</li>
+            <li>Relire l’énoncé plusieurs fois pour ne pas manquer un détail.</li>
+            <li>Diviser le problème en petites étapes.</li>
+            <li>Essayer différentes méthodes : dessin, tableau ou exemple concret.</li>
+            <li>Demander de l’aide : professeur, camarade ou forum de maths.</li>
+        </ul>
+    </div>
+
+    <!-- Accordéon 2 -->
+    <button class="accordion"><span class="accordion-icon">&#9654;</span>Techniques pour garder la motivation</button>
+    <div class="panel">
+        <ul>
+            <li>Fixer des petits objectifs : finir un exercice ou maîtriser une notion.</li>
+            <li>Se récompenser après un chapitre terminé.</li>
+            <li>Varier les exercices : calcul, géométrie, énigmes.</li>
+            <li>Se rappeler pourquoi on apprend les maths.</li>
+            <li>Tenir un carnet de progrès pour booster la confiance en soi.</li>
+        </ul>
+    </div>
+
+    <!-- Accordéon 3 -->
+    <button class="accordion"><span class="accordion-icon">&#9654;</span>Histoires de grands mathématiciens pour inspirer</button>
+    <div class="panel">
+        <ul>
+            <li>Évariste Galois : à 20 ans, il invente la théorie des groupes.</li>
+            <li>Sophie Germain : surmonte les obstacles pour travailler sur les nombres et vibrations.</li>
+            <li>Isaac Newton : inventeur du calcul infinitésimal et découvre la gravité.</li>
+            <li>Carl Friedrich Gauss : “le prince des mathématiciens”, persévérance et curiosité.</li>
+        </ul>
+        <p>“Je n’ai pas échoué. J’ai juste trouvé 10 000 solutions qui ne fonctionnent pas.” – Thomas Edison</p>
+    </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+Copyright 2026 SGH pour Maths Academy
+</footer>
+
+<script>
+// Menu mobile
+const toggleMenu = () => {
+    const nav = document.getElementById("mainNav");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
+
+// Accordéons
+const accordions = document.querySelectorAll(".accordion");
+accordions.forEach(acc => {
+    acc.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+});
+</script>
+</body>
+</html>
