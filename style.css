@@ -241,7 +241,7 @@ h3{
 }
 
 .logo-img {
-    height: 40px;   /* ajuste selon la taille du menu */
+    height: 35px;   /* ajuste selon la taille du menu */
     width: auto;    /* garde les proportions du logo */
     margin: 0;      /* supprime marges inutiles */
     padding: 0;     /* supprime padding éventuel */
