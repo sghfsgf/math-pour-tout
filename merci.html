@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci - SGH Maths Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="SGH Maths Academy" class="logo-img">
+            <span>SGH Maths Academy</span>
+        </div>
+        <div class="menu-toggle">&#9776;</div>
+        <nav id="mainNav">
+            <a href="index.html">Accueil</a>
+            <a href="college.html">Collège</a>
+            <a href="lycee.html">Lycée</a>
+            <a href="primaire.html">Primaire</a>
+            <a href="conseils.html">Conseils</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <div class="content contact-section" style="text-align:center;">
+        <h1>Merci !</h1>
+        <p>Votre message a bien été envoyé 👌</p>
+        <a href="index.html" style="display:inline-block;margin-top:20px;padding:10px 20px;background:#ff8000;color:white;border-radius:6px;text-decoration:none;font-weight:bold;">Retour à l’accueil</a>
+    </div>
+</main>
+
+<footer class="site-footer">
+    Copyright 2026 SGH pour Maths Academy
+</footer>
+
+<script>
+    const toggleMenu = () => {
+        const nav = document.getElementById("mainNav");
+        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    }
+    document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
+</script>
+</body>
+</html>
