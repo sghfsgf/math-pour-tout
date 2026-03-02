@@ -222,12 +222,12 @@ h3{
 }
 /* FOOTER COMMUN À TOUTES LES PAGES */
 .site-footer {
-    background-color: #c85f00; /* orange foncé */
+    background-color: #f6a85b; /* orange clair */
     color: black;
     text-align: center;
     padding: 15px 0;
     font-weight: bold;
-    border-top: 2px solid #a04800;
+    border-top: 2px solid #e58b3c; /* nuance légèrement plus foncée pour bordure */
     margin-top: 30px;
     border-radius: 0 0 12px 12px;
 }
