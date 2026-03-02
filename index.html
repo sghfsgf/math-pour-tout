@@ -1,80 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Maths Academy</title>
-
-<link rel="stylesheet" href="style.css">
-
-<!-- PWA -->
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#1f4e79">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - SGH Maths Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff8000">
 </head>
+
 <body>
 
 <header>
-<div class="nav-container">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="SGH Maths Academy" class="logo-img">
+            <span>SGH Maths Academy</span>
+        </div>
 
-<div class="logo">Maths Academy</div>
+        <div class="menu-toggle">&#9776;</div>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-<nav id="mainNav">
-<a href="index.html">Accueil</a>
-<a href="college.html">Collège</a>
-<a href="lycee.html">Lycée</a>
-<a href="primaire.html">Primaire</a>
-<a href="conseils.html">Conseils</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-</div>
+        <nav id="mainNav">
+            <a href="index.html">Accueil</a>
+            <a href="college.html">Collège</a>
+            <a href="lycee.html">Lycée</a>
+            <a href="primaire.html">Primaire</a>
+            <a href="conseils.html">Conseils</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<!-- CONTENU PRINCIPAL -->
-<div class="container">
+<!-- SECTION HERO -->
+<section style="background:#f5f9ff;padding:60px 20px;text-align:center;">
+    <h1 style="font-size:36px;color:#003366;">Bienvenue à SGH Maths Academy</h1>
+    <p style="font-size:18px;margin-top:15px;max-width:700px;margin-left:auto;margin-right:auto;">
+        Les mathématiques expliquées simplement pour réussir à tous les niveaux.
+        Des méthodes claires, des exercices pratiques et des conseils pour progresser avec confiance.
+    </p>
 
-<div class="content">
-<h1>Bienvenue sur Maths Academy</h1>
+    <div style="margin-top:30px;">
+        <a href="college.html" style="background:#ff8000;color:white;padding:12px 25px;border-radius:6px;text-decoration:none;font-weight:bold;margin:5px;">Voir les cours</a>
+        <a href="contact.html" style="background:#003366;color:white;padding:12px 25px;border-radius:6px;text-decoration:none;font-weight:bold;margin:5px;">Nous contacter</a>
+    </div>
+</section>
 
-<p>
-Cours, exercices et séries corrigées pour le Primaire, le Collège et le Lycée.
-</p>
+<!-- NIVEAUX -->
+<section style="padding:50px 20px;text-align:center;">
+    <h2 style="color:#003366;">Nos niveaux</h2>
 
-<p>
-Choisissez un niveau dans le menu pour commencer.
-</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;margin-top:30px;gap:30px;">
 
-</div>
+        <div style="width:280px;background:#ffffff;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+            <h3>📗 Primaire</h3>
+            <p>Bases solides en calcul, fractions, problèmes et logique mathématique.</p>
+            <a href="primaire.html" style="color:#ff8000;font-weight:bold;">Découvrir</a>
+        </div>
 
-</div>
+        <div style="width:280px;background:#ffffff;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+            <h3>📘 Collège</h3>
+            <p>Algèbre, équations, géométrie, fonctions et méthodes pour réussir les examens.</p>
+            <a href="college.html" style="color:#ff8000;font-weight:bold;">Découvrir</a>
+        </div>
 
-<!-- SCRIPT MENU MOBILE -->
-<script>
-function toggleMenu(){
-    const nav = document.getElementById("mainNav");
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-}
-</script>
+        <div style="width:280px;background:#ffffff;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+            <h3>📕 Lycée</h3>
+            <p>Fonctions avancées, probabilités, analyse et préparation au baccalauréat.</p>
+            <a href="lycee.html" style="color:#ff8000;font-weight:bold;">Découvrir</a>
+        </div>
 
-<!-- SERVICE WORKER -->
-<script>
-if("serviceWorker" in navigator){
-    navigator.serviceWorker.register("service-worker.js");
-}
-</script>
+    </div>
+</section>
+
+<!-- POURQUOI NOUS CHOISIR -->
+<section style="background:#f5f9ff;padding:50px 20px;text-align:center;">
+    <h2 style="color:#003366;">Pourquoi choisir SGH Maths Academy ?</h2>
+
+    <div style="max-width:800px;margin:auto;margin-top:25px;">
+        <p>✅ Explications simples et claires</p>
+        <p>✅ Méthodes détaillées étape par étape</p>
+        <p>✅ Conseils pour réussir les examens</p>
+        <p>✅ Motivation et confiance en soi</p>
+    </div>
+</section>
+
+<!-- MOTIVATION -->
+<section style="padding:50px 20px;text-align:center;">
+    <h2 style="color:#003366;">Les maths sont à ta portée !</h2>
+    <p style="max-width:700px;margin:auto;margin-top:15px;font-size:18px;">
+        Les mathématiques ne sont pas difficiles. 
+        Avec la bonne méthode, de la régularité et un peu de persévérance, 
+        chaque élève peut réussir et progresser.
+    </p>
+</section>
+
 <footer class="site-footer">
-    <p>© 2026 SGH pour Maths Academy</p>
+    Copyright 2026 SGH Maths Academy
 </footer>
-    <script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-        .then(()=>console.log('Service Worker enregistré !'))
-        .catch(err=>console.log(err));
+
+<script>
+    const toggleMenu = () => {
+        const nav = document.getElementById("mainNav");
+        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
     }
-    </script>
+    document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
+</script>
+
 </body>
 </html>
