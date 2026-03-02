@@ -234,7 +234,7 @@ h3{
 .logo {
     display: flex;
     align-items: center; /* aligne verticalement */
-    gap: 10px;           /* espace entre logo et texte */
+    gap: 4px;           /* espace entre logo et texte */
     font-size: 20px;
     font-weight: bold;
     color: white;
