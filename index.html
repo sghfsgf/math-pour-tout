@@ -8,7 +8,6 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#ff8000">
 </head>
-
 <body>
 
 <header>
@@ -17,9 +16,7 @@
             <img src="images/logo.png" alt="SGH Maths Academy" class="logo-img">
             <span>SGH Maths Academy</span>
         </div>
-
         <div class="menu-toggle">&#9776;</div>
-
         <nav id="mainNav">
             <a href="index.html">Accueil</a>
             <a href="college.html">Collège</a>
@@ -31,67 +28,54 @@
     </div>
 </header>
 
-<!-- SECTION HERO -->
-<section style="background:#f5f9ff;padding:60px 20px;text-align:center;">
-    <h1 style="font-size:36px;color:#003366;">Bienvenue à SGH Maths Academy</h1>
-    <p style="font-size:18px;margin-top:15px;max-width:700px;margin-left:auto;margin-right:auto;">
-        Les mathématiques expliquées simplement pour réussir à tous les niveaux.
-        Des méthodes claires, des exercices pratiques et des conseils pour progresser avec confiance.
-    </p>
-
-    <div style="margin-top:30px;">
-        <a href="college.html" style="background:#ff8000;color:white;padding:12px 25px;border-radius:6px;text-decoration:none;font-weight:bold;margin:5px;">Voir les cours</a>
-        <a href="contact.html" style="background:#003366;color:white;padding:12px 25px;border-radius:6px;text-decoration:none;font-weight:bold;margin:5px;">Nous contacter</a>
+<!-- HERO -->
+<section class="hero">
+    <h1>Bienvenue à SGH Maths Academy</h1>
+    <p>Les mathématiques expliquées simplement pour réussir à tous les niveaux.
+       Des méthodes claires, des exercices pratiques et des conseils pour progresser avec confiance.</p>
+    <div class="hero-buttons">
+        <a href="college.html" class="btn btn-primary">Voir les cours</a>
+        <a href="contact.html" class="btn btn-secondary">Nous contacter</a>
     </div>
 </section>
 
 <!-- NIVEAUX -->
-<section style="padding:50px 20px;text-align:center;">
-    <h2 style="color:#003366;">Nos niveaux</h2>
-
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;margin-top:30px;gap:30px;">
-
-        <div style="width:280px;background:#ffffff;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+<section class="section">
+    <h2>Nos niveaux</h2>
+    <div class="cards">
+        <div class="card">
             <h3>📗 Primaire</h3>
             <p>Bases solides en calcul, fractions, problèmes et logique mathématique.</p>
-            <a href="primaire.html" style="color:#ff8000;font-weight:bold;">Découvrir</a>
+            <a href="primaire.html" class="btn-card">Découvrir</a>
         </div>
-
-        <div style="width:280px;background:#ffffff;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+        <div class="card">
             <h3>📘 Collège</h3>
             <p>Algèbre, équations, géométrie, fonctions et méthodes pour réussir les examens.</p>
-            <a href="college.html" style="color:#ff8000;font-weight:bold;">Découvrir</a>
+            <a href="college.html" class="btn-card">Découvrir</a>
         </div>
-
-        <div style="width:280px;background:#ffffff;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+        <div class="card">
             <h3>📕 Lycée</h3>
             <p>Fonctions avancées, probabilités, analyse et préparation au baccalauréat.</p>
-            <a href="lycee.html" style="color:#ff8000;font-weight:bold;">Découvrir</a>
+            <a href="lycee.html" class="btn-card">Découvrir</a>
         </div>
-
     </div>
 </section>
 
 <!-- POURQUOI NOUS CHOISIR -->
-<section style="background:#f5f9ff;padding:50px 20px;text-align:center;">
-    <h2 style="color:#003366;">Pourquoi choisir SGH Maths Academy ?</h2>
-
-    <div style="max-width:800px;margin:auto;margin-top:25px;">
-        <p>✅ Explications simples et claires</p>
-        <p>✅ Méthodes détaillées étape par étape</p>
-        <p>✅ Conseils pour réussir les examens</p>
-        <p>✅ Motivation et confiance en soi</p>
-    </div>
+<section class="section section-alt">
+    <h2>Pourquoi choisir SGH Maths Academy ?</h2>
+    <ul class="advantages">
+        <li>✅ Explications simples et claires</li>
+        <li>✅ Méthodes détaillées étape par étape</li>
+        <li>✅ Conseils pour réussir les examens</li>
+        <li>✅ Motivation et confiance en soi</li>
+    </ul>
 </section>
 
 <!-- MOTIVATION -->
-<section style="padding:50px 20px;text-align:center;">
-    <h2 style="color:#003366;">Les maths sont à ta portée !</h2>
-    <p style="max-width:700px;margin:auto;margin-top:15px;font-size:18px;">
-        Les mathématiques ne sont pas difficiles. 
-        Avec la bonne méthode, de la régularité et un peu de persévérance, 
-        chaque élève peut réussir et progresser.
-    </p>
+<section class="section">
+    <h2>Les maths sont à ta portée !</h2>
+    <p>Les mathématiques ne sont pas difficiles. Avec la bonne méthode, de la régularité et un peu de persévérance, chaque élève peut réussir et progresser.</p>
 </section>
 
 <footer class="site-footer">
@@ -99,11 +83,11 @@
 </footer>
 
 <script>
-    const toggleMenu = () => {
-        const nav = document.getElementById("mainNav");
-        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-    }
-    document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
+const toggleMenu = () => {
+    const nav = document.getElementById("mainNav");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
 </script>
 
 </body>
