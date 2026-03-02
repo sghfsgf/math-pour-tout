@@ -246,3 +246,29 @@ h3{
     margin: 0;      /* supprime marges inutiles */
     padding: 0;     /* supprime padding éventuel */
 }
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-section input,
+.contact-section textarea,
+.contact-section button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-section button {
+    background-color: #ff8000;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    opacity: 0.85;
+}
