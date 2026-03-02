@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lycée - Maths Academy</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1f4e79">
+
+<style>
+
+/* STRUCTURE */
+.container{
+    display:flex;
+    gap:20px;
+    width:95%;
+    margin:20px auto;
+}
+
+.sidebar{
+    min-width:220px;
+    background:#2e75b6;
+    padding:20px;
+    border-radius:10px;
+    color:white;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    margin:12px 0;
+}
+
+.sidebar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.sidebar a:hover{
+    text-decoration:underline;
+}
+
+.content{
+    flex:1;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* PDF STYLE */
+.pdf-list a{
+    display:block;
+    margin:8px 0;
+    padding:10px;
+    background:#eaf2fb;
+    border-radius:8px;
+    text-decoration:none;
+    color:#1f4e79;
+    font-weight:bold;
+}
+
+.pdf-list a:hover{
+    background:#cfe2f7;
+}
+
+/* SEARCH */
+.search-box{
+    margin:15px 0;
+}
+
+.search-box input{
+    width:100%;
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .container{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav-container">
+
+<div class="logo">Maths Academy</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="mainNav">
+<a href="index.html">Accueil</a>
+<a href="college.html">Collège</a>
+<a href="lycee.html">Lycée</a>
+<a href="primaire.html">Primaire</a>
+<a href="conseils.html">Conseils</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<div class="container">
+
+<!-- MENU GAUCHE -->
+<div class="sidebar">
+<h3>Niveaux Lycée</h3>
+<ul>
+<li><a href="#" onclick="showPremiere()">Première</a></li>
+<li><a href="#" onclick="showDeuxieme()">Deuxième</a></li>
+<li><a href="#" onclick="showTroisieme()">Troisième</a></li>
+<li><a href="#" onclick="showQuatrieme()">Quatrième</a></li>
+</ul>
+</div>
+
+<!-- CONTENU -->
+<div class="content" id="contentArea">
+<h2>Mathématiques au Lycée</h2>
+<p>Sélectionnez un niveau dans le menu à gauche.</p>
+</div>
+
+</div>
+
+<script>
+
+/* ===== PREMIÈRE AVEC RECHERCHE ===== */
+function showPremiere(){
+document.getElementById("contentArea").innerHTML = `
+<h2>Première</h2>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Rechercher une série..." onkeyup="filterPDF()">
+</div>
+
+<h3>Trimestre 1</h3>
+<div class="pdf-list" id="pdfList">
+<a href="pdf/premiere/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+<a href="pdf/premiere/trimestre1/Serie2.pdf" target="_blank">Série 2</a>
+<a href="pdf/premiere/trimestre1/Serie3.pdf" target="_blank">Série 3</a>
+</div>
+
+<h3>Trimestre 2</h3>
+<div class="pdf-list">
+<a href="pdf/premiere/trimestre2/Serie1.pdf" target="_blank">Série 1</a>
+<a href="pdf/premiere/trimestre2/Serie2.pdf" target="_blank">Série 2</a>
+</div>
+`;
+}
+
+/* AUTRES NIVEAUX */
+function showDeuxieme(){
+document.getElementById("contentArea").innerHTML = `
+<h2>Deuxième</h2>
+<h3>Trimestre 1</h3>
+<div class="pdf-list">
+<a href="pdf/deuxieme/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+</div>
+`;
+}
+
+function showTroisieme(){
+document.getElementById("contentArea").innerHTML = `
+<h2>Troisième</h2>
+<h3>Trimestre 1</h3>
+<div class="pdf-list">
+<a href="pdf/troisieme/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+</div>
+`;
+}
+
+function showQuatrieme(){
+document.getElementById("contentArea").innerHTML = `
+<h2>Quatrième</h2>
+<h3>Trimestre 1</h3>
+<div class="pdf-list">
+<a href="pdf/quatrieme/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+</div>
+`;
+}
+
+/* RECHERCHE */
+function filterPDF(){
+let input = document.getElementById("searchInput").value.toLowerCase();
+let links = document.querySelectorAll("#pdfList a");
+
+links.forEach(link=>{
+    link.style.display = link.textContent.toLowerCase().includes(input) ? "block" : "none";
+});
+}
+
+/* MENU MOBILE */
+function toggleMenu(){
+    const nav = document.getElementById("mainNav");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+
+/* SERVICE WORKER */
+if("serviceWorker" in navigator){
+    navigator.serviceWorker.register("service-worker.js");
+}
+
+</script>
+
+</body>
+</html>
