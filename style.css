@@ -220,3 +220,14 @@ h3{
     from{opacity:0; transform:translateY(5px);}
     to{opacity:1; transform:translateY(0);}
 }
+/* FOOTER COMMUN À TOUTES LES PAGES */
+.site-footer {
+    background-color: #c85f00; /* orange foncé */
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    border-top: 2px solid #a04800;
+    margin-top: 30px;
+    border-radius: 0 0 12px 12px;
+}
