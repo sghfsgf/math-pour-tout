@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primaire - Maths Academy</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1f4e79">
+
+<style>
+
+/* STRUCTURE */
+.container{
+    display:flex;
+    gap:20px;
+    width:95%;
+    margin:20px auto;
+}
+
+.sidebar{
+    min-width:220px;
+    background:#2e75b6;
+    padding:20px;
+    border-radius:10px;
+    color:white;
+}
+
+.sidebar h3{
+    margin-top:0;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    margin:12px 0;
+}
+
+.sidebar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.sidebar a:hover{
+    text-decoration:underline;
+}
+
+.content{
+    flex:1;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* PDF */
+.pdf-list a{
+    display:block;
+    margin:8px 0;
+    padding:10px;
+    background:#eaf2fb;
+    border-radius:8px;
+    text-decoration:none;
+    color:#1f4e79;
+    font-weight:bold;
+}
+
+.pdf-list a:hover{
+    background:#cfe2f7;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .container{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav-container">
+
+<div class="logo">Maths Academy</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="mainNav">
+<a href="index.html">Accueil</a>
+<a href="college.html">Collège</a>
+<a href="lycee.html">Lycée</a>
+<a href="primaire.html">Primaire</a>
+<a href="conseils.html">Conseils</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<div class="container">
+
+<!-- MENU GAUCHE -->
+<div class="sidebar">
+<h3>Niveaux Primaire</h3>
+<ul>
+<li><a href="#" onclick="showPremiere()">1ère année</a></li>
+<li><a href="#" onclick="showDeuxieme()">2ème année</a></li>
+<li><a href="#" onclick="showTroisieme()">3ème année</a></li>
+<li><a href="#" onclick="showQuatrieme()">4ème année</a></li>
+<li><a href="#" onclick="showCinquieme()">5ème année</a></li>
+<li><a href="#" onclick="showSixieme()">6ème année</a></li>
+</ul>
+</div>
+
+<!-- CONTENU -->
+<div class="content" id="contentArea">
+<h2>Mathématiques au Primaire</h2>
+<p>Sélectionnez un niveau dans le menu à gauche.</p>
+</div>
+
+</div>
+
+<script>
+
+/* ===== CONTENU DYNAMIQUE ===== */
+
+function showPremiere(){
+document.getElementById("contentArea").innerHTML = `
+<h2>1ère année</h2>
+<h3>Trimestre 1</h3>
+<div class="pdf-list">
+<a href="pdf/primaire/premiere/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+</div>
+`;
+}
+
+function showDeuxieme(){
+document.getElementById("contentArea").innerHTML = `
+<h2>2ème année</h2>
+<h3>Trimestre 1</h3>
+<div class="pdf-list">
+<a href="pdf/primaire/deuxieme/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+</div>
+`;
+}
+
+function showTroisieme(){
+document.getElementById("contentArea").innerHTML = `
+<h2>3ème année</h2>
+<h3>Trimestre 1</h3>
+<div class="pdf-list">
+<a href="pdf/primaire/troisieme/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+</div>
+`;
+}
+
+function showQuatrieme(){
+document.getElementById("contentArea").innerHTML = `
+<h2>4ème année</h2>
+<h3>Trimestre 1</h3>
+<div class="pdf-list">
+<a href="pdf/primaire/quatrieme/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+</div>
+`;
+}
+
+function showCinquieme(){
+document.getElementById("contentArea").innerHTML = `
+<h2>5ème année</h2>
+<h3>Trimestre 1</h3>
+<div class="pdf-list">
+<a href="pdf/primaire/cinquieme/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+</div>
+`;
+}
+
+function showSixieme(){
+document.getElementById("contentArea").innerHTML = `
+<h2>6ème année</h2>
+<h3>Trimestre 1</h3>
+<div class="pdf-list">
+<a href="pdf/primaire/sixieme/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
+</div>
+`;
+}
+
+/* MENU MOBILE */
+function toggleMenu(){
+    const nav = document.getElementById("mainNav");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+
+/* SERVICE WORKER */
+if("serviceWorker" in navigator){
+    navigator.serviceWorker.register("service-worker.js");
+}
+
+</script>
+
+</body>
+</html>
