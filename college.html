@@ -90,9 +90,9 @@
 
 <header>
 <div class="nav-container">
-
 <div class="logo">SGH Maths Academy</div>
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 <nav id="mainNav">
 <a href="index.html">Accueil</a>
 <a href="college.html">Collège</a>
@@ -111,9 +111,9 @@
 <div class="sidebar">
 <h3>Niveaux Collège</h3>
 <ul>
-<li><a href="#" onclick="showSeptieme()">Septième</a></li>
-<li><a href="#" onclick="showHuitieme()">Huitième</a></li>
-<li><a href="#" onclick="showNeuvieme()">Neuvième</a></li>
+<li><a href="#" onclick="showSeptieme(); return false;">Septième</a></li>
+<li><a href="#" onclick="showHuitieme(); return false;">Huitième</a></li>
+<li><a href="#" onclick="showNeuvieme(); return false;">Neuvième</a></li>
 </ul>
 </div>
 
@@ -125,19 +125,19 @@
 
 </div>
 
-<!-- SCRIPT CONTENU DYNAMIQUE -->
+<!-- SCRIPT -->
 <script>
+
+/* ===== CONTENU DYNAMIQUE ===== */
 
 function showSeptieme(){
 document.getElementById("contentArea").innerHTML = `
 <h2>Septième</h2>
+
 <h3>Trimestre 1</h3>
 <div class="pdf-list">
-<a href="pdf/college/septieme/trimestre1/Serie1.pdf" target="_blank">
-</a>
-<a href="pdf/college/septieme/trimestre1/Serie2.pdf" target="_blank">
-Série 2
-</a>
+<a href="pdf/college/septieme/trimestre1/Serie1.pdf" target="_blank">📄 Série 1</a>
+<a href="pdf/college/septieme/trimestre1/Serie2.pdf" target="_blank">📄 Série 2</a>
 </div>
 `;
 }
@@ -148,29 +148,29 @@ document.getElementById("contentArea").innerHTML = `
 
 <h3>Trimestre 1</h3>
 <div class="pdf-list">
-<a href="pdf/college/huitieme/trimestre1/Serie1.pdf" target="_blank">Série 1</a>
-<a href="pdf/college/huitieme/trimestre1/Serie2.pdf" target="_blank">Série 2</a>
-<a href="pdf/college/huitieme/trimestre1/Serie3.pdf" target="_blank">Série 3</a>
-<a href="pdf/college/huitieme/trimestre1/Serie4.pdf" target="_blank">Série 4</a>
-<a href="pdf/college/huitieme/trimestre1/Serie5.pdf" target="_blank">Série 5</a>
+<a href="pdf/college/huitieme/trimestre1/Serie1.pdf" target="_blank">📄 Série 1</a>
+<a href="pdf/college/huitieme/trimestre1/Serie2.pdf" target="_blank">📄 Série 2</a>
+<a href="pdf/college/huitieme/trimestre1/Serie3.pdf" target="_blank">📄 Série 3</a>
+<a href="pdf/college/huitieme/trimestre1/Serie4.pdf" target="_blank">📄 Série 4</a>
+<a href="pdf/college/huitieme/trimestre1/Serie5.pdf" target="_blank">📄 Série 5</a>
 </div>
 
 <h3>Trimestre 2</h3>
 <div class="pdf-list">
-<a href="pdf/college/huitieme/trimestre2/Serie1.pdf" target="_blank">Série 1</a>
-<a href="pdf/college/huitieme/trimestre2/Serie2.pdf" target="_blank">Série 2</a>
-<a href="pdf/college/huitieme/trimestre2/Serie3.pdf" target="_blank">Série 3</a>
-<a href="pdf/college/huitieme/trimestre2/Serie4.pdf" target="_blank">Série 4</a>
-<a href="pdf/college/huitieme/trimestre2/Serie5.pdf" target="_blank">Série 5</a>
+<a href="pdf/college/huitieme/trimestre2/Serie1.pdf" target="_blank">📄 Série 1</a>
+<a href="pdf/college/huitieme/trimestre2/Serie2.pdf" target="_blank">📄 Série 2</a>
+<a href="pdf/college/huitieme/trimestre2/Serie3.pdf" target="_blank">📄 Série 3</a>
+<a href="pdf/college/huitieme/trimestre2/Serie4.pdf" target="_blank">📄 Série 4</a>
+<a href="pdf/college/huitieme/trimestre2/Serie5.pdf" target="_blank">📄 Série 5</a>
 </div>
 
 <h3>Trimestre 3</h3>
 <div class="pdf-list">
-<a href="pdf/college/huitieme/trimestre3/Serie1.pdf" target="_blank">Série 1</a>
-<a href="pdf/college/huitieme/trimestre3/Serie2.pdf" target="_blank">Série 2</a>
-<a href="pdf/college/huitieme/trimestre3/Serie3.pdf" target="_blank">Série 3</a>
-<a href="pdf/college/huitieme/trimestre3/Serie4.pdf" target="_blank">Série 4</a>
-<a href="pdf/college/huitieme/trimestre3/Serie5.pdf" target="_blank">Série 5</a>
+<a href="pdf/college/huitieme/trimestre3/Serie1.pdf" target="_blank">📄 Série 1</a>
+<a href="pdf/college/huitieme/trimestre3/Serie2.pdf" target="_blank">📄 Série 2</a>
+<a href="pdf/college/huitieme/trimestre3/Serie3.pdf" target="_blank">📄 Série 3</a>
+<a href="pdf/college/huitieme/trimestre3/Serie4.pdf" target="_blank">📄 Série 4</a>
+<a href="pdf/college/huitieme/trimestre3/Serie5.pdf" target="_blank">📄 Série 5</a>
 </div>
 `;
 }
@@ -178,49 +178,50 @@ document.getElementById("contentArea").innerHTML = `
 function showNeuvieme(){
 document.getElementById("contentArea").innerHTML = `
 <h2>Neuvième</h2>
+
 <h3>Trimestre 1</h3>
 <div class="pdf-list">
-<a href="pdf/college/neuvieme/trimestre1/Serie1.pdf" target="_blank">
-<a href="pdf/college/neuvieme/trimestre1/Serie2.pdf" target="_blank">
-</a>
+<a href="pdf/college/neuvieme/trimestre1/Serie1.pdf" target="_blank">📄 Série 1</a>
+<a href="pdf/college/neuvieme/trimestre1/Serie2.pdf" target="_blank">📄 Série 2</a>
 </div>
+
 <h3>Trimestre 2</h3>
 <div class="pdf-list">
-<a href="pdf/college/neuvieme/trimestre2/Serie1.pdf" target="_blank">
-<a href="pdf/college/neuvieme/trimestre2/Serie2.pdf" target="_blank">
-</a>
+<a href="pdf/college/neuvieme/trimestre2/Serie1.pdf" target="_blank">📄 Série 1</a>
+<a href="pdf/college/neuvieme/trimestre2/Serie2.pdf" target="_blank">📄 Série 2</a>
 </div>
+
 <h3>Trimestre 3</h3>
 <div class="pdf-list">
-<a href="pdf/college/neuvieme/trimestre3/Serie1.pdf" target="_blank">
-<a href="pdf/college/neuvieme/trimestre3/Serie2.pdf" target="_blank">
-<a href="pdf/college/neuvieme/trimestre3/Serie3.pdf" target="_blank">
-<a href="pdf/college/neuvieme/trimestre3/Serie4.pdf" target="_blank">
-<a href="pdf/college/neuvieme/trimestre3/Serie5.pdf" target="_blank">
-</a>
+<a href="pdf/college/neuvieme/trimestre3/Serie1.pdf" target="_blank">📄 Série 1</a>
+<a href="pdf/college/neuvieme/trimestre3/Serie2.pdf" target="_blank">📄 Série 2</a>
+<a href="pdf/college/neuvieme/trimestre3/Serie3.pdf" target="_blank">📄 Série 3</a>
+<a href="pdf/college/neuvieme/trimestre3/Serie4.pdf" target="_blank">📄 Série 4</a>
+<a href="pdf/college/neuvieme/trimestre3/Serie5.pdf" target="_blank">📄 Série 5</a>
 </div>
 `;
 }
 
-<script>
-
-/* MENU MOBILE */
+/* ===== MENU MOBILE ===== */
 function toggleMenu(){
     const nav = document.getElementById("mainNav");
     nav.style.display = nav.style.display === "flex" ? "none" : "flex";
 }
 
-/* SERVICE WORKER (version propre) */
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-    .then(() => console.log('Service Worker enregistré !'))
-    .catch(err => console.log('Erreur SW:', err));
-}
+/* ===== SERVICE WORKER ===== */
+window.addEventListener("load", () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker enregistré !'))
+        .catch(err => console.log('Erreur SW:', err));
+    }
+});
 
 </script>
 
 <footer class="site-footer">
     <p>© 2026 SGH Maths Academy</p>
 </footer>
+
 </body>
 </html>
