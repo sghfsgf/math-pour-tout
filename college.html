@@ -202,27 +202,25 @@ document.getElementById("contentArea").innerHTML = `
 `;
 }
 
+<script>
+
 /* MENU MOBILE */
 function toggleMenu(){
     const nav = document.getElementById("mainNav");
     nav.style.display = nav.style.display === "flex" ? "none" : "flex";
 }
 
-/* SERVICE WORKER */
-if("serviceWorker" in navigator){
-    navigator.serviceWorker.register("service-worker.js");
+/* SERVICE WORKER (version propre) */
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('Service Worker enregistré !'))
+    .catch(err => console.log('Erreur SW:', err));
 }
 
 </script>
- <footer class="site-footer">
+
+<footer class="site-footer">
     <p>© 2026 SGH Maths Academy</p>
 </footer>
-    <script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-        .then(()=>console.log('Service Worker enregistré !'))
-        .catch(err=>console.log(err));
-    }
-    </script>
 </body>
 </html>
