@@ -359,3 +359,164 @@ body {
         width: 280px;
     }
 }
+
+
+
+/* ===================================== */
+/* INTRODUCTION SGH MATHS ACADEMY - HERO */
+/* ===================================== */
+
+.hero {
+    background: linear-gradient(135deg, #f5f9ff, #ffffff);
+    padding: 45px 5%;
+    text-align: center;
+}
+
+/* Titre principal */
+.hero > h1 {
+    font-size: 36px;
+    color: #003366;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+/* Sous-titre */
+.hero > h2 {
+    max-width: 900px;
+    margin: 0 auto 25px;
+    color: #ff8000;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* Paragraphes d'introduction uniquement */
+.hero > p {
+    max-width: 950px;
+    margin: 12px auto;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Organisation des deux blocs pédagogiques */
+.hero-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1150px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+/* Apparence des blocs */
+.hero-block {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e8f2;
+    border-top: 4px solid #ff8000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Titres des blocs */
+.hero-block h3 {
+    margin: 0 0 15px;
+    color: #003366;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+.hero-block h4 {
+    margin: 20px 0 10px;
+    color: #1f4e79;
+    font-size: 17px;
+}
+
+/* Texte des blocs */
+.hero-block p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Listes pédagogiques */
+.hero-block ul {
+    padding-left: 22px;
+    margin: 12px 0;
+}
+
+.hero-block li {
+    margin-bottom: 9px;
+    padding-left: 3px;
+    line-height: 1.7;
+}
+
+/* Conclusion de chaque bloc */
+.hero-block p strong {
+    color: #003366;
+}
+
+/* Boutons d'action */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.hero .btn {
+    display: inline-block;
+    width: auto;
+    min-width: 190px;
+    max-width: 100%;
+    margin: 0;
+    padding: 13px 22px;
+    text-align: center;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.hero .btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Adaptation aux tablettes et téléphones */
+@media (max-width: 767px) {
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero > h1 {
+        font-size: 28px;
+    }
+
+    .hero > h2 {
+        font-size: 20px;
+    }
+
+    .hero > p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 25px;
+    }
+
+    .hero-block {
+        padding: 20px;
+    }
+
+    .hero-block h3 {
+        font-size: 19px;
+    }
+
+    .hero .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}
