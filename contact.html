@@ -1,404 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Demander un accompagnement - SGH Maths Academy</title>
-
-    <meta name="description"
-          content="Présentez votre difficulté en mathématiques et demandez un accompagnement personnalisé auprès de SGH Maths Academy.">
-
+    <title>Contact-Maths Academy</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <header>
     <div class="nav-container">
-
         <div class="logo">
-            <span>SGH Maths Academy</span>
+                  <span>SGH Maths Academy</span>
         </div>
-
-        <div class="menu-toggle"
-             role="button"
-             tabindex="0"
-             aria-label="Ouvrir ou fermer le menu"
-             aria-controls="mainNav"
-             aria-expanded="false">
-            &#9776;
-        </div>
-
+        <div class="menu-toggle">&#9776;</div>
         <nav id="mainNav">
             <a href="index.html">Accueil</a>
             <a href="college.html">Collège</a>
             <a href="lycee.html">Lycée</a>
             <a href="primaire.html">Primaire</a>
             <a href="conseils.html">Conseils</a>
-            <a href="contact.html" aria-current="page">
-                Accompagnement
-            </a>
+            <a href="contact.html">Contact</a>
         </nav>
-
     </div>
 </header>
 
-
 <main class="container">
-
     <div class="content contact-section">
+        <h1>Contactez-nous</h1>
+        <p>Pour toute question ou suggestion, utilisez le formulaire ci-dessous :</p>
 
-        <h1>Demander un accompagnement</h1>
+        <!-- Formulaire via Formsubmit.co -->
+        <form action="https://formsubmit.co/esghaier.ainformation@gmail.com" method="POST" enctype="multipart/form-data">
+            <!-- Redirection vers page Merci -->
+           <input type="hidden" name="_next" value="https://sghfsgf.github.io/math-pour-tout/merci.html">
+            <input type="hidden" name="_captcha" value="false">
 
-        <p>
-            Vous rencontrez une difficulté en mathématiques ?
-            Vous souhaitez comprendre une notion, résoudre un problème
-            ou utiliser les mathématiques dans votre activité professionnelle ?
-        </p>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
 
-        <p>
-            Que vous soyez élève, étudiant universitaire, professionnel
-            ou simplement désireux d'apprendre, SGH Maths Academy
-            vous propose un accompagnement adapté à votre besoin.
-        </p>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email">
 
-        <h2>Présentez-nous votre besoin</h2>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
 
-        <p>
-            Remplissez le formulaire ci-dessous.
-            Décrivez votre difficulté aussi précisément que possible
-            afin que nous puissions étudier votre demande.
-        </p>
+            <label for="attachment">Joindre un fichier :</label>
+            <input type="file" id="attachment" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
 
-
-        <!-- Formulaire de demande d'accompagnement -->
-
-        <form
-            action="https://formsubmit.co/esghaier.ainformation@gmail.com"
-            method="POST"
-            enctype="multipart/form-data">
-
-            <!-- Objet du courriel -->
-
-            <input
-                type="hidden"
-                name="_subject"
-                value="Nouvelle demande d'accompagnement - SGH Maths Academy">
-
-            <!-- Redirection après soumission -->
-
-            <input
-                type="hidden"
-                name="_next"
-                value="https://sghfsgf.github.io/math-pour-tout/merci.html">
-
-            <!-- Paramètre existant de FormSubmit -->
-
-            <input
-                type="hidden"
-                name="_captcha"
-                value="false">
-
-
-            <!-- Coordonnées -->
-
-            <h3>1. Vos coordonnées</h3>
-
-            <label for="name">
-                Nom et prénom :
-            </label>
-
-            <input
-                type="text"
-                id="name"
-                name="name"
-                autocomplete="name"
-                placeholder="Votre nom et prénom"
-                required>
-
-
-            <label for="phone">
-                Numéro de téléphone :
-            </label>
-
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                autocomplete="tel"
-                placeholder="Votre numéro de téléphone"
-                required>
-
-
-            <label for="email">
-                Adresse e-mail :
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                autocomplete="email"
-                placeholder="exemple@domaine.com"
-                required>
-
-
-            <label for="contactPreference">
-                Moyen de contact préféré :
-            </label>
-
-            <select
-                id="contactPreference"
-                name="contact_preference"
-                required>
-
-                <option value="">
-                    -- Choisir un moyen de contact --
-                </option>
-
-                <option value="Telephone">
-                    Téléphone
-                </option>
-
-                <option value="Email">
-                    E-mail
-                </option>
-
-                <option value="WhatsApp">
-                    WhatsApp
-                </option>
-
-            </select>
-
-
-            <!-- Profil de l'utilisateur -->
-
-            <h3>2. Votre profil</h3>
-
-            <label for="profile">
-                Vous êtes :
-            </label>
-
-            <select
-                id="profile"
-                name="profile"
-                required>
-
-                <option value="">
-                    -- Choisir votre profil --
-                </option>
-
-                <option value="Eleve primaire">
-                    Élève du primaire
-                </option>
-
-                <option value="Eleve college">
-                    Élève du collège
-                </option>
-
-                <option value="Eleve lycee">
-                    Élève du lycée
-                </option>
-
-                <option value="Etudiant universitaire">
-                    Étudiant universitaire
-                </option>
-
-                <option value="Professionnel">
-                    Professionnel
-                </option>
-
-                <option value="Adulte autre profil">
-                    Adulte / Autre profil
-                </option>
-
-            </select>
-
-
-            <label for="level">
-                Votre niveau d'études ou domaine d'activité :
-            </label>
-
-            <input
-                type="text"
-                id="level"
-                name="level_or_domain"
-                placeholder="Ex. : 9e année, Licence, statistiques, travail...">
-
-
-            <!-- Nature de la demande -->
-
-            <h3>3. Votre besoin</h3>
-
-            <label for="requestType">
-                Que souhaitez-vous faire ?
-            </label>
-
-            <select
-                id="requestType"
-                name="request_type"
-                required>
-
-                <option value="">
-                    -- Choisir votre besoin --
-                </option>
-
-                <option value="Comprendre une notion">
-                    Comprendre une notion mathématique
-                </option>
-
-                <option value="Resoudre un exercice">
-                    Résoudre un exercice ou un problème
-                </option>
-
-                <option value="Combler des lacunes">
-                    Combler des lacunes
-                </option>
-
-                <option value="Preparation examen concours">
-                    Préparer un examen ou un concours
-                </option>
-
-                <option value="Universite">
-                    Travailler sur des mathématiques universitaires
-                </option>
-
-                <option value="Statistiques probabilites">
-                    Comprendre les statistiques ou les probabilités
-                </option>
-
-                <option value="Application professionnelle">
-                    Appliquer les mathématiques dans mon travail
-                </option>
-
-                <option value="Autre besoin">
-                    Autre besoin
-                </option>
-
-            </select>
-
-
-            <label for="message">
-                Décrivez votre difficulté ou votre objectif :
-            </label>
-
-            <textarea
-                id="message"
-                name="message"
-                rows="7"
-                minlength="10"
-                maxlength="5000"
-                placeholder="Expliquez ce que vous souhaitez comprendre, le problème que vous rencontrez ou le résultat que vous voulez obtenir..."
-                required></textarea>
-
-
-            <!-- Document facultatif -->
-
-            <h3>4. Document complémentaire (facultatif)</h3>
-
-            <p>
-                Vous pouvez joindre une photo d'un exercice,
-                un énoncé, un document PDF ou un fichier utile
-                à la compréhension de votre demande.
-            </p>
-
-            <label for="attachment">
-                Joindre un fichier :
-            </label>
-
-            <input
-                type="file"
-                id="attachment"
-                name="attachment"
-                accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
-
-            <small>
-                Formats acceptés : PDF, JPG, PNG, DOC et DOCX.
-                Vérifiez que votre document ne contient pas
-                d'informations personnelles inutiles.
-            </small>
-
-
-            <!-- Consentement -->
-
-            <div class="consentement">
-
-                <label for="privacyConsent">
-
-                    <input
-                        type="checkbox"
-                        id="privacyConsent"
-                        name="privacy_consent"
-                        value="accepted"
-                        required>
-
-                    J'accepte que les informations fournies
-                    soient utilisées pour examiner ma demande
-                    et me contacter à ce sujet.
-
-                </label>
-
-            </div>
-
-
-            <!-- Envoi -->
-
-            <button type="submit">
-                Envoyer ma demande
-            </button>
-
+            <button type="submit">Envoyer</button>
         </form>
-
-        <p class="contact-note">
-            Après réception de votre demande, celle-ci sera examinée
-            afin de déterminer l'accompagnement correspondant à votre besoin.
-        </p>
-
     </div>
-
 </main>
-
 
 <footer class="site-footer">
     © 2026 SGH Maths Academy
 </footer>
 
-
 <script>
-
     // Menu hamburger mobile
-
-    const toggleButton = document.querySelector(".menu-toggle");
-    const nav = document.getElementById("mainNav");
-
-    function toggleMenu() {
-
-        const menuOuvert =
-            nav.classList.toggle("menu-ouvert");
-
-        toggleButton.setAttribute(
-            "aria-expanded",
-            String(menuOuvert)
-        );
-
+    const toggleMenu = () => {
+        const nav = document.getElementById("mainNav");
+        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
     }
-
-    toggleButton.addEventListener("click", toggleMenu);
-
-    toggleButton.addEventListener("keydown", function(event) {
-
-        if (event.key === "Enter" || event.key === " ") {
-
-            event.preventDefault();
-            toggleMenu();
-
-        }
-
-    });
-
+    document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
 </script>
-
 </body>
 </html>
